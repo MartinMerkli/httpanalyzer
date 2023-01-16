@@ -1,0 +1,20 @@
+# Byte-compiled python files
+__pycache__/
+*.py[cod]
+
+# JetBrains
+.idea/
+
+# Virtual environments
+venv/
+
+# Packaging
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+sdist/
+*.egg-info/
+*.egg
