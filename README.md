@@ -4,4 +4,4 @@ This is a python library for analyzing http-request. Useful to reduce unnecessar
 
 ## License
 
-This Project is licensed under the MIT-license. See LICENSE.txt for more information.
+This project is licensed under the MIT-license. See LICENSE.txt for more information.
