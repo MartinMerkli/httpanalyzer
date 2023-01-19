@@ -9,8 +9,12 @@ authors = [
   { name="Martin Merkli", email="martin.merkli@protonmail.com" },
 ]
 description = "Library for analyzing http-requests"
+homepage = "https://github.com/MartinMerkli/httpanalyzer"
+repository = "https://github.com/MartinMerkli/httpanalyzer"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.9"
+keywords = ['python', 'http']
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
