@@ -28,4 +28,6 @@ class Request:
         for element in BOTS_AGENT:
             if element in user_agent:
                 yes += 10.0
+        if self._path in ['/robots.txt', '/sitemap.xml']:
+            yes += 5.0
         return yes / (yes + no)
