@@ -58,3 +58,19 @@ BOTS_AGENT = {
     'urllib',  # client for python
     'zgrab',  # pentesting tool
 }
+SEARCH_ENGINE_AGENT = {
+    'adidxbot',  # Bing
+    'adsbot-google',  # Google
+    'apis-google',  # Google
+    'baiduspider',  # Baidu
+    'bingbot',  # Bing
+    'bingpreview',  # Bing
+    'feedfetcher-google',  # Google
+    'google-read-aloud',  # Google
+    'google-site-verification',  # Google
+    'googlebot',  # Google
+    'mediapartners-google',  # Google
+    'microsoftpreview',  # Bing
+    'msnbot-media',  # Bing
+    'storebot-google',  # Google
+}
