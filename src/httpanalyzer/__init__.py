@@ -30,4 +30,5 @@ class Request:
                 yes += 10.0
         if self._path in ['/robots.txt', '/sitemap.xml']:
             yes += 5.0
-        return yes / (yes + no)
+        self._bot_rating = yes / (yes + no)
+        return self._bot_rating
