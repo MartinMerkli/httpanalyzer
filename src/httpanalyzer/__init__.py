@@ -19,6 +19,7 @@ class Request:
 
         self._malicious_rating = None
         self._bot_rating = None
+        self._search_rating = None
 
     def bot(self) -> float:
         from .src import BOTS_AGENT
@@ -31,4 +32,17 @@ class Request:
         if self._path in ['/robots.txt', '/sitemap.xml']:
             yes += 5.0
         self._bot_rating = yes / (yes + no)
+        return self._bot_rating
+
+    def search_engine(self) -> float:
+        from .src import SEARCH_ENGINE_AGENT
+        yes = 0.0
+        no = 1.0
+        user_agent = self._http_headers.get('user_agent', '').lower()
+        for element in SEARCH_ENGINE_AGENT:
+            if element in user_agent:
+                yes += 10.0
+        if self._path in ['/robots.txt', '/sitemap.xml']:
+            yes += 5.0
+        self._search_rating = yes / (yes + no)
         return self._bot_rating
