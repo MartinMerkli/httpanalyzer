@@ -74,3 +74,7 @@ SEARCH_ENGINE_AGENT = {
     'msnbot-media',  # Bing
     'storebot-google',  # Google
 }
+BOTS_PATH = {
+    '/robots.txt',
+    '/sitemap.xml',
+}

@@ -22,27 +22,27 @@ class Request:
         self._search_rating = None
 
     def bot(self) -> float:
-        from .src import BOTS_AGENT
+        from .src import BOTS_AGENT, BOTS_PATH
         yes = 0.0
         no = 1.0
         user_agent = self._http_headers.get('user_agent', '').lower()
         for element in BOTS_AGENT:
             if element in user_agent:
                 yes += 10.0
-        if self._path in ['/robots.txt', '/sitemap.xml']:
+        if self._path in BOTS_PATH:
             yes += 5.0
         self._bot_rating = yes / (yes + no)
         return self._bot_rating
 
     def search_engine(self) -> float:
-        from .src import SEARCH_ENGINE_AGENT
+        from .src import SEARCH_ENGINE_AGENT, BOTS_PATH
         yes = 0.0
         no = 1.0
         user_agent = self._http_headers.get('user_agent', '').lower()
         for element in SEARCH_ENGINE_AGENT:
             if element in user_agent:
                 yes += 10.0
-        if self._path in ['/robots.txt', '/sitemap.xml']:
+        if self._path in BOTS_PATH:
             yes += 5.0
         self._search_rating = yes / (yes + no)
         return self._bot_rating
