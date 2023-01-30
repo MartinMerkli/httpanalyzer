@@ -46,3 +46,19 @@ class Request:
             yes += 5.0
         self._search_rating = yes / (yes + no)
         return self._bot_rating
+
+    def malicious(self) -> float:
+        from .src import MALICIOUS_PATHS
+        from .utils import url_decode
+        yes = 0.0
+        no = 1.0
+        path = url_decode(self._path.lower())
+        for element in MALICIOUS_PATHS:
+            excluded = False
+            for page in self._admin_pages:
+                if page in element:
+                    excluded = True
+            if (element in path) and (not excluded):
+                yes += 10.0
+        self._malicious_rating = yes / (yes + no)
+        return self._malicious_rating
