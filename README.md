@@ -55,4 +55,4 @@ print(f"Malicious rating: {instance.malicious() * 100}%")
 
 ## Dependencies
 
-Python 3.6 or newer is required. Older version do not work.
+Python 3.6 or newer is required. Older versions do not work.
