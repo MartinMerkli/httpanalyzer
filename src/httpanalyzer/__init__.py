@@ -22,6 +22,10 @@ class Request:
         self._search_rating = None
 
     def bot(self) -> float:
+        """
+        Get a rating on the possibility that this request was made by a bot.
+        :return: float between 0.0 and 1.0 (NOT linear distribution)
+        """
         from .src import BOTS_AGENT, BOTS_PATH
         yes = 0.0
         no = 1.0
@@ -35,6 +39,10 @@ class Request:
         return self._bot_rating
 
     def search_engine(self) -> float:
+        """
+        Get a rating on the possibility that this request was made by a search engine.
+        :return: float between 0.0 and 1.0 (NOT linear distribution)
+        """
         from .src import SEARCH_ENGINE_AGENT, BOTS_PATH
         yes = 0.0
         no = 1.0
@@ -48,6 +56,10 @@ class Request:
         return self._bot_rating
 
     def malicious(self) -> float:
+        """
+        Get a rating on the possibility that this request was made with malicious intends.
+        :return: float between 0.0 and 1.0 (NOT linear distribution)
+        """
         from .src import MALICIOUS_PATHS
         from .utils import url_decode
         yes = 0.0
