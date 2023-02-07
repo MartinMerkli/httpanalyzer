@@ -53,6 +53,10 @@ instance = httpanalyzer.Request(
 print(f"Malicious rating: {instance.malicious() * 100}%")
 ```
 
+### Admin Panels
+
+To reduce the amount of false positives, specify all admin panels you are using. For WordPress this would be `['wp-content', 'wp-config', 'wp-includes']`.
+
 ## Dependencies
 
 Python 3.6 or newer is required. Older versions do not work.
