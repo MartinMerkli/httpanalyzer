@@ -192,4 +192,3 @@ MALICIOUS_PATHS = {
     'wp-includes',
     'zimlet'
 }
-
