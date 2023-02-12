@@ -53,7 +53,7 @@ class Request:
         if self._path in BOTS_PATH:
             yes += 5.0
         self._search_rating = yes / (yes + no)
-        return self._bot_rating
+        return self._search_rating
 
     def malicious(self) -> float:
         """
