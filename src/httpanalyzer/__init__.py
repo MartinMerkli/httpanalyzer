@@ -51,7 +51,7 @@ class Request:
             if element in user_agent:
                 yes += 10.0
         if self._path in BOTS_PATH:
-            yes += 5.0
+            yes += 0.2
         self._search_rating = yes / (yes + no)
         return self._search_rating
 
