@@ -30,7 +30,7 @@ class Request:
             from .src import BOTS_AGENT, BOTS_PATH
             yes = 0.0
             no = 1.0
-            user_agent = self._http_headers.get('user_agent', '').lower()
+            user_agent = self._http_headers.get('User-Agent', '').lower()
             for element in BOTS_AGENT:
                 if element in user_agent:
                     yes += 10.0
@@ -48,7 +48,7 @@ class Request:
             from .src import SEARCH_ENGINE_AGENT, BOTS_PATH
             yes = 0.0
             no = 1.0
-            user_agent = self._http_headers.get('user_agent', '').lower()
+            user_agent = self._http_headers.get('User-Agent', '').lower()
             for element in SEARCH_ENGINE_AGENT:
                 if element in user_agent:
                     yes += 10.0
