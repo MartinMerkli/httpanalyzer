@@ -36,6 +36,8 @@ class Request:
                     yes += 10.0
             if self._path in BOTS_PATH:
                 yes += 5.0
+            if self._http_headers.get('Referer', '') != '':
+                no += 2.0
             self._bot_rating = yes / (yes + no)
         return self._bot_rating
 
@@ -75,5 +77,7 @@ class Request:
                         excluded = True
                 if (element in path) and (not excluded):
                     yes += 10.0
+            if self._http_headers.get('Referer', '') != '':
+                no += 2.0
             self._malicious_rating = yes / (yes + no)
         return self._malicious_rating
