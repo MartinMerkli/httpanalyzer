@@ -1,4 +1,12 @@
-# httpanalyzer
+<h1 align="center">httpanalyzer</h1>
+
+<p align="center">
+<a href="https://www.python.org/"><img alt="Language" src="https://img.shields.io/badge/Language-Python-blue?style=for-the-badge&logo=python"></a>
+<a href="https://mit-license.org/"><img alt="License" src="https://img.shields.io/pypi/l/httpanalyzer?color=blueviolet&style=for-the-badge"></a>
+<a href="https://pypi.org/project/httpanalyzer/"><img alt="Version" src="https://img.shields.io/pypi/v/httpanalyzer?label=version&logo=pypi&style=for-the-badge"></a>
+<a href="https://github.com/MartinMerkli/httpanalyzer"><img alt="Stars" src="https://img.shields.io/github/stars/martinmerkli/httpanalyzer?color=lightgrey&logo=github&style=for-the-badge"></a>
+<a href="https://github.com/MartinMerkli/httpanalyzer/commits/main"><img alt="Commit Activity" src="https://img.shields.io/github/commit-activity/m/martinmerkli/httpanalyzer?color=green&style=for-the-badge"></a>
+</p>
 
 This is a python library for analyzing http-request. Useful to reduce unnecessary traffic. 
 
