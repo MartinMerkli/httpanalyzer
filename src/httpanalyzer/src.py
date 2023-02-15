@@ -189,6 +189,5 @@ MALICIOUS_PATHS = {
     'wp-config',
     'wp-content',
     'wp-includes',
-    'wp-includes',
     'zimlet'
 }
