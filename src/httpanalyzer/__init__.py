@@ -81,3 +81,9 @@ class Request:
                 no += 2.0
             self._malicious_rating = yes / (yes + no)
         return self._malicious_rating
+
+
+class FlaskRequest(Request):
+
+    def __init__(self, request, admin_pages: list = None):
+        super().__init__(dict(request.headers), request.access_route[-1], request.full_path, admin_pages)
