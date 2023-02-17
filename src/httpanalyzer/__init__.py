@@ -86,4 +86,9 @@ class Request:
 class FlaskRequest(Request):
 
     def __init__(self, request, admin_pages: list = None):
+        """
+        Class for analyzing http traffic from the http headers and the ip address.
+        :param request: the flask request object
+        :param admin_pages: all different admin tools you are using (see README.md for more information)
+        """
         super().__init__(dict(request.headers), request.access_route[-1], request.full_path, admin_pages)
