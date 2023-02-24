@@ -2,6 +2,7 @@ BOTS_AGENT = {
     'abuse.xmco.fr',  # company providing cyber-security monitoring
     'adidxbot',  # search engine
     'adsbot-google',  # search engine
+    'aiohttp',  # client for python
     'alexa site audit',  # crawler
     'apache-httpclient',  # client for java
     'apis-google',  # search engine
@@ -40,6 +41,7 @@ BOTS_AGENT = {
     'masscan',  # web scraper
     'mediapartners-google',  # search engine
     'microsoftpreview',  # crawler
+    'mj12bo',  # search engine
     'msnbot-media',  # search engine
     'netcraftsurveyagent',  # company providing cyber-security monitoring
     'netsystemsresearch',  # research project conducting cybersecurity studies
@@ -53,9 +55,11 @@ BOTS_AGENT = {
     'report runner',  # suddenly changed user agent from node.js to this one
     'requests',  # client for python
     'scaninfo@paloaltonetworks.com',  # company searching for specific information
+    'semrush',  # crawler
     'storebot-google',  # search engine
     'tchelebi',  # company providing cyber-security monitoring
     'urllib',  # client for python
+    'yandex',  # search engine
     'zgrab',  # pentesting tool
 }
 SEARCH_ENGINE_AGENT = {
@@ -71,8 +75,10 @@ SEARCH_ENGINE_AGENT = {
     'googlebot',  # Google
     'mediapartners-google',  # Google
     'microsoftpreview',  # Bing
+    'mj12bo',  # Majestic
     'msnbot-media',  # Bing
     'storebot-google',  # Google
+    'yandex',  # Yandex
 }
 BOTS_PATH = {
     '/robots.txt',
@@ -84,6 +90,7 @@ MALICIOUS_PATHS = {
     '(*),CONCAT(0x7e,md5(1)',
     '--exec=<divd',
     '.git/config',
+    '.git/head',
     '.oast.',
     '/+cscoe+/',
     '/+cscot+/',
@@ -97,10 +104,12 @@ MALICIOUS_PATHS = {
     '/config/',
     '/xiao',
     '/~user/',
+    '9568f36-d428-11d2-a769-00aa001acf42',
     '<script>alert(document.domain)</script>',
     '<svg/onload=alert',
     '?xdebug_session_start=phpstorm',
     '@java.lang.runtime@getruntime',
+    '@zdi/powershell',
     'ActiveRecord::PendingMigrationError',
     'BinName.arm',
     'DashboardLayoutOneCol',
@@ -117,12 +126,14 @@ MALICIOUS_PATHS = {
     'W1siZyIsICJjb252ZXJ0IiwgIi1zaXplIDF4MSAtZGVwdGggOCBncmF5Oi9ldGMvcGFzc3dkIiwgIm91dCJdXQ',
     '\\win.ini',
     '_/;/WEB-INF',
+    '_ignition/execute-solution',
     'acsserver',
     'actuator',
     'admin',
     'ajaxServerSettingsChk',
     'audit/gui_detail_view.php',
     'boaform',
+    'call_user_func_array&vars[0]',
     'cfide',
     'cgi-bin',
     'chmod+777',
@@ -140,6 +151,8 @@ MALICIOUS_PATHS = {
     'field=updatexml',
     'file:///etc/hosts',
     'foodbakery_radius',
+    'hnap1',
+    'inicio.pl',
     'interact.sh',
     'invokefunction&function=',
     'java.io.InputStreamReader',
@@ -163,13 +176,16 @@ MALICIOUS_PATHS = {
     'opensso/sessionservice',
     'org.apache.struts2.ServletActionContext',
     'org.apache.tomcat.instancemanager',
+    'owa/auth/logon.aspx',
     'path=x&site[x][text]',
     'phpmyadmin',
     'profileIdx=web.item.graph',
     'readycloud_control.cgi',
+    'remote/fgt_lang',
     'reset/IjEi.YhAmmQ.cdQp7CnnVq02aQ05y8tSBddl-qs',
     'rm+-rf+*;wget',
     'rm+-rf+/tmp/*;wget',
+    'scripts/wpnbr.dll',
     'select(md5',
     'shareBox&query=app=Common',
     'sms5/ajax.sms_emoticon',
@@ -184,10 +200,12 @@ MALICIOUS_PATHS = {
     'union+select+(select+concat',
     'username=root&db=mysql',
     'utl_inaddr.get_host_name',
+    'vendor/phpunit',
     'widget_tabbedcontainer_tab_panel',
     'wlwmanifest',
     'wp-config',
     'wp-content',
     'wp-includes',
-    'zimlet'
+    'wp-login',
+    'zimlet',
 }
