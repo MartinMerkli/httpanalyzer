@@ -31,7 +31,7 @@ BOTS_AGENT = {
     'https://csirt.divd.nl/',  # automatic vulnerability disclosure
     'https://developers.google.com/',  # search engine
     'https://gdnplus.com',  # crawler
-    'https://github.com/imroc/req'  # client for go
+    'https://github.com/imroc/req',  # client for go
     'internetmeasurement',  # automatic vulnerability disclosure
     'java/',  # java programming language
     'l9explore',  # pentesting tool
@@ -51,7 +51,7 @@ BOTS_AGENT = {
     'nvdorz',  # was trying to access the same sketchy url in regular intervals
     'pandalytics',  # company monitoring the internet
     'project-resonance',  # research project studying the security state of the internet
-    'project_patchwatch'  # research project conducting network security studies
+    'project_patchwatch',  # research project conducting network security studies
     'python',  # python programming language
     'report runner',  # suddenly changed user agent from node.js to this one
     'requests',  # client for python
@@ -252,7 +252,7 @@ MALICIOUS_PATHS = {
     'wp-content',
     'wp-includes',
     'wp-login',
-    'xmldata?item=cpqkey'
+    'xmldata?item=cpqkey',
     'zimlet',
     '嘍嘊set-',
 }
