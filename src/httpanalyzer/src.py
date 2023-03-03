@@ -23,6 +23,7 @@ BOTS_AGENT = {
     'google-read-aloud',  # search engine
     'google-site-verification',  # search engine
     'googlebot',  # search engine
+    'guayoyo',  # was trying to access sketchy urls on websites
     'hello world',  # generic bot user agent
     'hello, momentum',  # generic bot user agent
     'hello, umad?',  # generic bot user agent
@@ -61,6 +62,7 @@ BOTS_AGENT = {
     'storebot-google',  # search engine
     'tchelebi',  # company providing cyber-security monitoring
     'urllib',  # client for python
+    'vcenter',  # was trying to access sketchy urls on websites
     'yandex',  # search engine
     'zgrab',  # pentesting tool
 }
@@ -94,7 +96,11 @@ MALICIOUS_PATHS = {
     '.git/config',
     '.git/head',
     '.github/workflows/',
+    '.idea/httprequests',
     '.oast.',
+    '.remote-sync.json',
+    '.svn/entries',
+    '.well-known/security.txt',
     '/+cscoe+/',
     '/+cscot+/',
     '/+cscou+/',
@@ -105,10 +111,12 @@ MALICIOUS_PATHS = {
     '/.ssh/id',
     '/autodiscover/autodiscover.json?@',
     '/config/',
+    '/console',
     '/solr/',
     '/xiao',
     '/~user/',
     '2ioep23yxgkpwamwajv0rhiznfa',
+    '3c625c27b4da33d3d5c12e8d02104755',
     '9568f36-d428-11d2-a769-00aa001acf42',
     '<script>alert(document.domain)</script>',
     '<svg/onload=alert',
@@ -137,6 +145,7 @@ MALICIOUS_PATHS = {
     'boaform',
     'call_user_func_array&vars[0]',
     'casa/nodes/thumbprints',
+    'casa/nodes/thumbprints',
     'cfide',
     'cgi-bin',
     'chmod+777',
@@ -144,6 +153,7 @@ MALICIOUS_PATHS = {
     'clientlogin/?srid=&action=showdeny&url=',
     'cmd=nslookup',
     'cmdb/sslvpn_websession',
+    'com.vmware.vsan.client',
     'commpilot',
     'compliancepolicyelements',
     'core-cloud-config.yml',
@@ -155,9 +165,11 @@ MALICIOUS_PATHS = {
     'datagrid=179&json=',
     'debug.seam',
     'docker-cloud.yml',
+    'docker-compose',
     'dockerfile',
     'dockerrun.aws.json',
     'ejbinvokerservlet',
+    'etc/local.xml',
     'etc/passwd',
     'extend/pearcmd',
     'faces-redirect=true',
@@ -165,6 +177,7 @@ MALICIOUS_PATHS = {
     'file:///etc/hosts',
     'foodbakery_radius',
     'ftpsync.settings',
+    'gcloud/credentials.db',
     'google-api-private-key.json',
     'hnap1',
     'inicio.jsp',
@@ -179,6 +192,7 @@ MALICIOUS_PATHS = {
     'jmxinvokerservlet',
     'jre-6u13-windows-i586-p',
     'karma.conf.js',
+    'ker_portal/c/version.js',
     'kustomization.yml',
     'lang_modvalidate.php',
     'libs/granite/ui',
@@ -190,9 +204,11 @@ MALICIOUS_PATHS = {
     'methodaccessor.denymethodexecution',
     'microsoft.exchange.ediscovery.exporttool.application',
     'microstrategy',
+    'mifs/.;/services',
     'mirai.arm',
     'mozi.a+jaws',
     'mpxnode/www/appconfig',
+    'msmtprc',
     'nginx-status',
     'nmaplowercheck',
     'nomgif=tarik',
@@ -210,15 +226,19 @@ MALICIOUS_PATHS = {
     'phpmyadmin',
     'pools/default/buckets',
     'portal_inc.lua',
+    'printenv.pl',
     'profileidx=web.item.graph',
+    'putty.ppk',
     'querycomponentrenderervalue',
     'readycloud_control.cgi',
+    'redis.conf',
     'remote/fgt_lang',
     'reset/ijei.yhammq.cdqp7cnnvq02aq05y8tsbddl-qs',
     'rest/applinks/1.',
     'rm+-rf+*;wget',
     'rm+-rf+/tmp/*;wget',
     'scripts/wpnbr.dll',
+    'secret_token.rb',
     'select(md5',
     'settings.py',
     'sftp-config.json',
@@ -229,6 +249,7 @@ MALICIOUS_PATHS = {
     'sqlitemanager',
     'src/util/php/eval-stdin',
     'sslvpn_websession',
+    'streaming/clients_live.php',
     'string[]{\'sh\',\'-c\',\'id\'}',
     'sum:sys.cpu.nice',
     'syscommand',
@@ -245,7 +266,9 @@ MALICIOUS_PATHS = {
     'vendor/phpunit',
     'ventrilo_srv.ini',
     'w1sizyisicjjb252zxj0iiwgii1zaxplidf4msatzgvwdgggocbncmf5oi9ldgmvcgfzc3dkiiwgim91dcjdxq',
+    'web_vms/level15',
     'webfig',
+    'wgetrc',
     'widget_tabbedcontainer_tab_panel',
     'wlwmanifest',
     'wp-config',
