@@ -36,7 +36,7 @@ class Request:
             for element in _BOTS_AGENT:
                 if element in user_agent:
                     yes += 10.0
-            if self._path in _BOTS_PATH:
+            if _url_decode(self._path.lower()) in _BOTS_PATH:
                 yes += 5.0
             if self._http_headers.get('Referer', '') != '':
                 no += 2.0
@@ -55,7 +55,7 @@ class Request:
             for element in _SEARCH_ENGINE_AGENT:
                 if element in user_agent:
                     yes += 10.0
-            if self._path in _BOTS_PATH:
+            if _url_decode(self._path.lower()) in _BOTS_PATH:
                 yes += 0.2
             self._search_rating = yes / (yes + no)
         return self._search_rating
