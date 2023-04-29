@@ -1,6 +1,9 @@
 from .src import MALICIOUS_PATHS as _MALICIOUS_PATHS, BOTS_PATH as _BOTS_PATH, BOTS_AGENT as _BOTS_AGENT
 from .src import SEARCH_ENGINE_AGENT as _SEARCH_ENGINE_AGENT
 from .utils import url_decode as _url_decode
+import importlib.resources as _importlib_resources
+from . import lists as _lists
+from math import log2 as _log2
 
 
 class Request:
@@ -40,6 +43,9 @@ class Request:
                 yes += 5.0
             if self._http_headers.get('Referer', '') != '':
                 no += 2.0
+            for wordlist in []:
+                if self._path in _importlib_resources.read_text(_lists, wordlist).splitlines():
+                    yes += 0.05 * _log2(len(self._path) + 1) ** 2
             self._bot_rating = yes / (yes + no)
         return self._bot_rating
 
@@ -78,6 +84,9 @@ class Request:
                     yes += 10.0
             if self._http_headers.get('Referer', '') != '':
                 no += 2.0
+            for wordlist in []:
+                if self._path in _importlib_resources.read_text(_lists, wordlist).splitlines():
+                    yes += 0.05 * _log2(len(self._path) + 1) ** 2
             self._malicious_rating = yes / (yes + no)
         return self._malicious_rating
 
