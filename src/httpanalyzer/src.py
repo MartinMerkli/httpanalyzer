@@ -91,7 +91,7 @@ BOTS_PATH = {
     '/sitemap.xml',
 }
 MALICIOUS_PATHS = {
-    '${''.class.forname(\'javax',
+    '${\'\'.class.forname(\'javax',
     '${@die(md5',
     '${jndi:ldap://$',
     '&_method=__construct&method=*&filter[]=',
